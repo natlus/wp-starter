@@ -1,0 +1,42 @@
+.btn {
+  display: inline-block;
+  margin: 10px 0;
+  line-height: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  color: $foreground;
+  transition: background 100ms ease-in-out, color 100ms ease-in-out;
+  border-radius: $radius;
+  background: $default;
+  border: solid 1px darken($default, 10%);
+  cursor: pointer;
+  vertical-align: middle;
+  user-select: none;
+
+  &.round {
+    border-radius: 50px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    background: darken($default, 2.5%);
+  }
+
+  &:active {
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+  }
+
+  [class*=ion],
+  [class*=icon] {
+    vertical-align: middle;
+    font-size: 150%;
+    margin-right: 5px;
+  }
+}
+
+@import './outline';
+@import './group';
+@import './colored';
+@import './size';

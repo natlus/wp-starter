@@ -1,0 +1,62 @@
+input#show-resp-menu {
+  display: none !important;
+}
+
+// Menu button used for small devices
+.show-resp-menu {
+  @include flexbox(column);
+  justify-content: center;
+  display: none;
+  margin-left: auto;
+  height: 24px;
+  width: 24px;
+  position: relative;
+  animation: slide-left 200ms 500ms ease-in backwards;
+  z-index: 9;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  // Main Menu icon
+  .vertbar {
+    transition: transform 350ms cubic-bezier(0.27, 1, 0.32, 1);
+    width: 24px;
+    height: 1px;
+    background: $header-fg;
+    margin: auto 0;
+  }
+
+  // Close button
+  &.close {
+    .vertbar {
+      position: absolute;
+    }
+  }
+
+  @include breakpoint(small) {
+    display: flex;
+  }
+}
+
+.show-resp-menu.close .vertbar.top {
+  transform: translate3d(0 ,0 ,0) rotate(45deg);
+}
+.show-resp-menu.close .vertbar.mid {
+  transform: translate3d(0, 0, 0) scale3d(0, 0, 0);
+}
+.show-resp-menu.close .vertbar.bot {
+  transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+// Show responsive main menu on menu button click
+input#show-resp-menu:checked ~ nav.main-menu {
+  display: block !important;
+  transform: scale3d(1, 1, 1) !important;
+}
+
+// Toggle menu item animation on menu button click
+input#show-resp-menu:checked ~ nav.main-menu li {
+  transform: translate3d(0, 0, 0) !important;
+  opacity: 1 !important;
+}

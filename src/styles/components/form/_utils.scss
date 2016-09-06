@@ -1,0 +1,12 @@
+@include placeholder {
+  color: lighten($foreground, 35%);
+}
+
+.input-inline {
+  display: inline-block !important;
+}
+
+.input-large {
+  padding-top: 13px !important;
+  padding-bottom: 13px !important;
+}

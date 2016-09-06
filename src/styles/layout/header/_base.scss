@@ -1,0 +1,26 @@
+.masthead {
+  position: fixed;
+  width: 100%;
+  background: $header-bg;
+  color: $header-fg;
+  transition: all 300ms ease-in-out !important;
+  opacity: 1;
+  z-index: 8;
+  box-shadow: 1px 0 2px rgba(#000, 0.2);
+
+  &.no-background {
+  }
+
+  .container {
+    @include flexbox(row);
+    @include container($box-container);
+    align-items: center;
+    height: $box-header;
+    padding-left: $box-gutter;
+    padding-right: $box-gutter;
+  }
+
+  @import './logo';
+  @import './nav';
+  @import './subnav';
+}

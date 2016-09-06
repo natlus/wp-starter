@@ -1,0 +1,20 @@
+.btn-outline {
+  color: $default;
+  background: none;
+  background: none;
+  box-shadow: none;
+  border: solid 2px $default;
+
+  &.btn-small {
+    border: solid 1px $default;
+  }
+
+  &:hover {
+    color: $foreground;
+    background: $default;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}

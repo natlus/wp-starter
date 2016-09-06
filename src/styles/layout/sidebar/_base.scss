@@ -1,0 +1,15 @@
+.sidebar {
+  @include flexbox(column);
+  width: $box-sidebar;
+  max-width: $box-sidebar;
+  margin-right: auto;
+  margin-top: $box-gutter;
+  padding-left: $box-gutter;
+  padding-right: $box-gutter;
+  order: 2;
+  color: $foreground;
+  z-index: 2;
+
+  @import './widgets';
+  @import './columns';
+}

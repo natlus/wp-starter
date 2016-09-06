@@ -1,0 +1,30 @@
+.btn {
+  padding: 6px 12px;
+}
+
+.btn-small {
+  font-size: $text-small;
+  padding: 1px 6px;
+
+  .icon, .ion {
+    font-size: $text-small * 1.5;
+  }
+}
+
+.btn-large {
+  font-size: $text-large;
+  padding: 12px 24px;
+
+  .icon, .ion {
+    font-size: $text-large * 1.5;
+  }
+}
+
+.btn-xlarge {
+  font-size: $text-xlarge;
+  padding: 16px 32px;
+
+  .icon, .ion {
+    font-size: $text-xlarge * 1.5;
+  }
+}

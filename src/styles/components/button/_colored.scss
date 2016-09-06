@@ -1,0 +1,131 @@
+.btn-accent {
+  color: #fff;
+  background: $accent;
+  border-color: darken($accent, 25%);
+
+  &:hover {
+    background: darken($accent, 5%);
+  }
+
+  &.btn-outline {
+    color: $accent;
+    background: transparent;
+    background: none;
+    border-color: $accent;
+
+    &:hover {
+      background: $accent;
+      color: #fff;
+    }
+  }
+}
+
+.btn-primary {
+  color: #fff;
+  background: $primary;
+  border-color: darken($primary, 10%);
+
+  &:hover {
+    background: darken($primary, 10%);
+  }
+
+  &.btn-outline {
+    color: $primary;
+    background: transparent;
+    background: none;
+    border-color: $primary;
+
+    &:hover {
+      background: $primary;
+      color: #fff;
+    }
+  }
+}
+
+.btn-success {
+  color: #fff;
+  background: $success;
+  border-color: darken($success, 10%);
+
+  &:hover {
+    background: darken($success, 15%);
+  }
+
+  &.btn-outline {
+    color: $success;
+    background: transparent;
+    background: none;
+    border-color: $success;
+
+    &:hover {
+      background: $success;
+      color: #fff;
+    }
+  }
+}
+
+.btn-warning {
+  color: #fff;
+  background: $warning;
+  border-color: darken($warning, 10%);
+
+  &:hover {
+    background: darken($warning, 10%);
+  }
+
+  &.btn-outline {
+    color: $warning;
+    background: transparent;
+    background: none;
+    border-color: $warning;
+
+    &:hover {
+      background: $warning;
+      color: #fff;
+    }
+  }
+}
+
+.btn-danger {
+  color: #fff;
+  background: $danger;
+  border-color: darken($danger, 10%);
+
+  &:hover {
+    background: darken($danger, 15%);
+  }
+
+  &.btn-outline {
+    color: $danger;
+    background: transparent;
+    background: none;
+    border-color: $danger;
+
+    &:hover {
+      background: $danger;
+      color: #fff;
+    }
+  }
+}
+
+.btn-brand {
+  color: $foreground;
+  background: $brand;
+  border-color: darken($brand, 10%);
+
+  &:hover {
+    background: darken($brand, 10%);
+  }
+
+  &.btn-outline {
+    color: $brand;
+    background: transparent;
+    background: none;
+    border-color: $brand;
+
+    &:hover {
+      background: $brand;
+      color: #fff;
+    }
+  }
+}

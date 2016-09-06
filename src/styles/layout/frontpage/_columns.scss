@@ -1,0 +1,20 @@
+.columns {
+  padding-top: $box-gutter;
+  padding-bottom: $box-gutter;
+
+  @include breakpoint(small) {
+    @include flexbox(column);
+  }
+
+  .column {
+    text-align: center;
+    padding: ($box-gutter * 2) $box-gutter;
+    line-height: 150%;
+
+    @include breakpoint(small) {
+      width: 100%;
+      border-left: 0;
+      border-right: 0;
+    }
+  }
+}

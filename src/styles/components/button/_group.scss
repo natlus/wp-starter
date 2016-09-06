@@ -1,0 +1,49 @@
+.btn-group {
+  @include flexbox(row);
+
+  .btn {
+    border-radius: 0;
+
+    &:not(:first-of-type) {
+      border-left: 0;
+    }
+
+    &:first-of-type {
+      border-top-left-radius: $radius;
+      border-bottom-left-radius: $radius;
+    }
+
+    &:last-of-type {
+      border-top-right-radius: $radius;
+      border-bottom-right-radius: $radius;
+    }
+  }
+}
+
+.btn-group-column {
+  @include flexbox(column);
+
+  .btn {
+    margin: 0;
+    border-radius: 0;
+
+    a {
+      display: block;
+      padding-left: 12px;
+    }
+
+    &:first-of-type {
+      border-top-left-radius: $radius;
+      border-top-right-radius: $radius;
+    }
+
+    &:last-of-type {
+      border-bottom-left-radius: $radius;
+      border-bottom-right-radius: $radius;
+    }
+
+    &:not(:last-of-type) {
+      border-bottom: 0;
+    }
+  }
+}

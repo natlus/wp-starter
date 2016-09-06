@@ -1,0 +1,37 @@
+.title {
+  font-weight: 600;
+  border-bottom: $border;
+  margin-bottom: $box-gutter / 2;
+  padding: 4px;
+
+  @include breakpoint(large) {
+    padding: 6px 12px;
+  }
+}
+
+ul li {
+  padding: 2px 4px;
+
+  @include breakpoint(large) {
+    padding: 6px 12px;
+  }
+
+  a {
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    @include breakpoint(large) {
+      padding: 6px 12px;
+    }
+  }
+}
+
+a {
+  color: lighten($foreground, 20%);
+
+  &:hover {
+    color: $foreground;
+  }
+}

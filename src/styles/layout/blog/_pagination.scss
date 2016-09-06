@@ -1,0 +1,26 @@
+.pagination {
+  margin-bottom: $box-gutter;
+  align-items: center;
+  justify-content: center;
+  color: $foreground;
+  border-radius: 3px;
+
+  .btn {
+    padding: 0;
+  }
+
+  .page-numbers {
+    display: block;
+    padding: 6px 12px;
+
+    [class*=ion] {
+      vertical-align: baseline;
+      font-size: inherit;
+      margin: 0;
+    }
+
+    &.current {
+      color: $primary;
+    }
+  }
+}

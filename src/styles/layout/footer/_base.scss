@@ -1,0 +1,30 @@
+.mastfoot {
+  @include flexbox(column);
+  width: 100%;
+  background: $footer-bg;
+  color: $footer-fg;
+  position: relative;
+  background: $default;
+  box-shadow: 0 -1px 1px rgba(#000, 0.1);
+
+  @include breakpoint(small) {
+    font-size: $text-large;
+    padding: 0;
+  }
+
+  .container {
+    @include container($box-container);
+    @include flexbox(row);
+    padding-left: $box-gutter;
+    padding-right: $box-gutter;
+
+    @include breakpoint(small) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  @import './bottom';
+  @import './widgets';
+  @import './columns';
+}

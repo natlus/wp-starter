@@ -1,0 +1,84 @@
+.mastfoot-bottom {
+  width: 100%;
+  padding: 15px 0;
+  background: $footer-bottom-bg;
+  order: 2;
+  font-size: $text-small;
+  color: $footer-fg;
+  border-top: $border;
+
+  .container {
+    padding-left: $box-gutter;
+    padding-right: $box-gutter;
+    align-items: center;
+
+    @include breakpoint(large) {
+      flex-direction: column !important;
+    }
+  }
+
+  a {
+    font-size: $text-small;
+    color: $footer-fg;
+  }
+
+  .legal {
+    @include flexbox(column);
+
+    @include breakpoint(large) {
+      width: 100%;
+    }
+
+    @include breakpoint(small) {
+      @include flexbox(column);
+      font-size: $text-small;
+      align-items: center;
+    }
+
+    .mastfoot-legal-nav {
+      margin-top: 10px;
+
+      @include breakpoint(small) {
+        margin-bottom: 10px;
+      }
+
+      ul {
+        @include flexbox(row);
+
+        li {
+          a {
+            padding-left: 8px;
+            padding-right: 8px;
+          }
+          &:first-of-type {
+            a {
+              padding-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .social {
+    margin-left: auto;
+
+    .widget {
+      > div {
+        @include flexbox(row);
+
+        *:not(last-of-type) {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    @include breakpoint(small) {
+      margin-left: 0;
+    }
+
+    [class*=ion] {
+      font-size: 18px;
+    }
+  }
+}

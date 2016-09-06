@@ -1,0 +1,19 @@
+
+.row {
+  width: 100%;
+  background: $default;
+
+  &:nth-of-type(even) {
+    // background: none;
+  }
+
+  &:not(:last-of-type) {
+    border-bottom: $border;
+  }
+
+  &.accent {
+    background: $accent;
+    color: $background !important;
+    border-color: $accent !important;
+  }
+}

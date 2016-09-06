@@ -1,0 +1,10 @@
+main.main {
+  @include flexbox(row);
+  width: 100%;
+  flex: 1;
+  margin-top: $box-header;
+
+  &:not(.jumbopage) {
+    margin-top: $box-header;
+  }
+}

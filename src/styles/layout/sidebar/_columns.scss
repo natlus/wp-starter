@@ -1,0 +1,10 @@
+.column {
+  > div {
+    margin-bottom: 20px;
+    padding: $box-gutter;
+
+    &.widget {
+      padding: 0;
+    }
+  }
+}

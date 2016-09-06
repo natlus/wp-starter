@@ -1,0 +1,43 @@
+// Layout dimensions
+$box-header: 70px;
+$box-container: 1024px;
+$box-sidebar: 256px;
+$box-gutter: 22px;
+$radius: 3px;
+$border: 1px solid #eee;
+
+// Main colors
+$background: #fcfcfc !default;
+$foreground: #424242 !default;
+$brand: #679ce9 !default;
+
+// Layout colors
+$header-bg: #fff;
+$header-fg: #828282;
+$footer-bg: #fff;
+$footer-bottom-bg: #fff;
+$footer-fg: #828282;
+
+// States
+$default: #FFFFFF !default;
+$accent: #424242 !default;
+$primary: #679ce9 !default;
+$success: #71e967 !default;
+$warning: #edd13b !default;
+$danger: #e96767 !default;
+
+// Type
+$sans: 'myriad-pro', sans-serif;
+$serif: 'Georgia', serif;
+$line-height: 1.5;
+$text-base: 15px;
+$text-small: 12px;
+$text-large: 18px;
+$text-xlarge: 22px;
+
+// Media screen sizes
+$breakpoints: (
+  'small': 768px,
+  'medium': 896px,
+  'large': 1024px,
+);

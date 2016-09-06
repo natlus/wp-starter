@@ -1,0 +1,31 @@
+# OS generated files
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+*.esproj
+*.espressostorage
+
+# Extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.zip
+*.vi
+*~
+
+# Package files
+node_modules/
+bower_components/
+.sass-cache/
+
+# Project files
+dist/
+build/

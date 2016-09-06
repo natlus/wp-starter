@@ -1,0 +1,114 @@
+$tooltip-color: rgba(#000, 0.8);
+
+.tooltip {
+  position: relative;
+  cursor: pointer;
+  z-index: 5;
+
+  &:after {
+    display: none;
+    position: absolute;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: break-word;
+    white-space: pre;
+    font-size: $text-small;
+    font-weight: 600;
+    color: #fff;
+    background: $tooltip-color;
+    border-radius: $radius;
+    content: attr(aria-label);
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  &:before {
+    display: none;
+    position: absolute;
+    border: 5px solid transparent;
+    border-top-color: $tooltip-color;
+    content: "";
+    pointer-events: none;
+  }
+
+  // Trigger
+  &:hover,
+  &:active,
+  &:focus {
+    &:after,
+    &:before {
+      display: inline-block;
+    }
+  }
+}
+
+.tooltip-top {
+  &:after {
+    right: 50%;
+    transform: translate3d(50%, 0, 0);
+    bottom: 100%;
+    margin-bottom: 6px;
+  }
+
+  &:before {
+    right: 50%;
+    transform: translate3d(50%, 0, 0);
+    top: -6px;
+    border-top-color: $tooltip-color;
+  }
+}
+
+.tooltip-bottom {
+  &:after {
+    right: 50%;
+    transform: translate3d(50%, 0, 0);
+    top: 100%;
+    margin-top: 6px;
+  }
+
+  &:before {
+    right: 50%;
+    transform: translate3d(50%, 0, 0);
+    bottom: -6px;
+    border-top-color: transparent;
+    border-bottom-color: $tooltip-color;
+  }
+}
+
+.tooltip-left {
+  &:after {
+    bottom: 50%;
+    transform: translate3d(0, 50%, 0);
+    right: 100%;
+    margin-right: 6px;
+  }
+
+  &:before {
+    bottom: 50%;
+    transform: translate3d(0, 50%, 0);
+    left: -6px;
+    border-top-color: transparent;
+    border-left-color: $tooltip-color;
+  }
+}
+
+.tooltip-right {
+  &:after {
+    bottom: 50%;
+    transform: translate3d(0, 50%, 0);
+    left: 100%;
+    margin-left: 6px;
+  }
+
+  &:before {
+    bottom: 50%;
+    transform: translate3d(0, 50%, 0);
+    right: -6px;
+    border-top-color: transparent;
+    border-right-color: $tooltip-color;
+  }
+}

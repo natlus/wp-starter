@@ -1,0 +1,36 @@
+.title {
+  color: $accent;
+  font-weight: 600;
+  user-select: none;
+
+  @include breakpoint(small) {
+    padding: 20px;
+    cursor: pointer;
+
+    &:after {
+      font-family: 'Ionicons';
+      font-size: 14px;
+      margin-left: 12px;
+      content: '\f123';
+    }
+  }
+}
+
+li {
+  padding: 2px 0;
+}
+
+a {
+  color: $footer-fg;
+
+  &:hover {
+    color: $accent;
+  }
+
+  @include breakpoint(small) {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 600;
+  }
+}

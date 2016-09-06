@@ -1,0 +1,34 @@
+.columns {
+  @include breakpoint(small) {
+    @include flexbox(column);
+  }
+
+  .column {
+    padding: 20px 0;
+
+    @include breakpoint(small) {
+      padding: 0;
+    }
+
+    > div {
+      margin-bottom: 25px;
+    }
+
+    @include breakpoint(small) {
+      width: 100%;
+
+      > div > ul,
+      > div > div {
+        transition: all 100ms ease-in-out;
+        display: none;
+        overflow: hidden;
+
+        li, a {
+          padding-left: 20px;
+          transform: translate3d(0, 0, 0);
+          animation: slide-down 250ms 0 cubic-bezier(0.27, 1.1, 0.32, 1.1);
+        }
+      }
+    }
+  }
+}

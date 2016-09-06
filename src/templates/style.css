@@ -1,0 +1,9 @@
+/*
+Theme Name: wordpress-starter
+Theme URI: github.com/natlus
+Description: Fast WordPress starter theme using modern workflow
+Version: 0.1
+Author: Jesper Sultan
+*/
+
+@import url('./css/base.css');

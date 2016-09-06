@@ -1,0 +1,19 @@
+.form-group {
+  @include flexbox(row);
+  align-items: center;
+
+  input {
+    display: inline;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .btn {
+    margin: 0;
+    padding: 8px 10px;
+    border: $form-border;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0;
+  }
+}

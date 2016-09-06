@@ -1,0 +1,40 @@
+.columns {
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
+  &.center {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.center-vert {
+    align-items: center;
+  }
+
+  &.center-hor {
+    justify-content: center;
+  }
+}
+
+.column {
+  &.flex {
+    display: flex;
+  }
+
+  &.flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &.center {
+    display: flex;
+    align-items: center;
+  }
+
+  &.compact {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}

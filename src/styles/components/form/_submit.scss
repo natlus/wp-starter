@@ -1,0 +1,14 @@
+input[type=submit],
+input[type=button],
+input[type=reset] {
+  @extend .btn;
+
+  &.btn-large,
+  &.input-large {
+    @extend .btn-large;
+  }
+}
+
+input[type=submit] {
+  @extend .btn-success;
+}
