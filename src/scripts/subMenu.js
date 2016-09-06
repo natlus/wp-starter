@@ -4,9 +4,9 @@
 
     const subMenu = $('.sub-menu');
 
-    /*
-    ** Fix half pixel bug on sub menus
-    ** caused by css transforms using % values
+    /**
+     * Fix half pixel bug on sub menus
+     * caused by css transforms using % values
     */
     const height = subMenu.outerHeight();
     const width = subMenu.outerWidth();
@@ -17,10 +17,10 @@
       subMenu.outerWidth(width + 1);
     }
 
-    /*
-    **  Add a show/hide toggle for sub menus
-    **
-    */
+    /**
+     *  Add a show/hide toggle for sub menus
+     *
+     */
 
     $('.menu-item-has-children').append('<span class="toggle-sub-menu"></span>')
 

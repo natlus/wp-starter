@@ -5,14 +5,13 @@
     const checkbox = $('input.modal-checkbox');
     const body = $('body');
 
-    /*
-    **  Force modal height and width to always be an even number
-    **  Fix for the "webkit half-pixel transform bug"
-    **  Where odd dimensions get transformed half a pixel, causing blur
-    **
-    **  Using AND bitwise operator to check if modal width/height is odd
-    **  and append 1px accordingly
-    **/
+    /**
+     * Force modal height and width to always be an even number
+     * Fix for the "webkit half-pixel transform bug"
+     * Where odd dimensions get transformed half a pixel, causing blur
+     * Using AND bitwise operator to check if modal width/height is odd
+     * and append 1px accordingly
+     */
 
     const height = modal.outerHeight();
     const width = modal.outerWidth();
