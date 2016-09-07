@@ -5,9 +5,7 @@
  *  Create a separate sourcemap file index.js.map in /dist/js
  */
 
-import { paths } from '../gulpfile.config.js';
-
-export default (gulp, plugins, errOut) => {
+export default (gulp, plugins, paths, errOut) => {
   return () => (
     gulp.src(paths.js.src)
       .pipe(plugins.sourcemaps.init())

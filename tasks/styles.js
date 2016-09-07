@@ -5,9 +5,7 @@
  *  Create a separate sourcemap file base.css.map in /dist/css
  */
 
-import { paths } from '../gulpfile.config.js';
-
-export default (gulp, plugins, errOut) => {
+export default (gulp, plugins, paths, errOut) => {
   return () => (
     gulp.src(paths.sass.src)
       .pipe(plugins.sourcemaps.init())

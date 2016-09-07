@@ -2,9 +2,7 @@
  *  Copies all includes files to the dist root directory
  */
 
-import { paths } from '../gulpfile.config.js';
-
-export default (gulp, plugins, errOut) => {
+export default (gulp, plugins, paths, errOut) => {
   return () => (
     gulp.src(paths.includes.src)
       .pipe(plugins.plumber({ errorHandler: errOut }))
