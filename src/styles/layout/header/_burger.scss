@@ -20,9 +20,10 @@ input#main-menu-toggle {
 
   .vertbar {
     transition: transform 350ms cubic-bezier(0.27, 1, 0.32, 1);
-    width: 24px;
-    height: 1px;
+    width: 32px;
+    height: 2px;
     background: $header-fg;
+    border-radius: $radius;
     margin: auto 0;
   }
 
