@@ -3,10 +3,8 @@
   width: 100%;
   background: $header-bg;
   color: $header-fg;
-  transition: all 300ms ease-in-out !important;
-  opacity: 1;
-  z-index: 8;
   box-shadow: 1px 0 2px rgba(#000, 0.2);
+  z-index: 8;
 
   &.no-background {
   }
