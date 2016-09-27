@@ -33,12 +33,12 @@
             <?php endif; ?>
           </a>
       </div>
-      <label for="show-resp-menu" class="show-resp-menu">
+      <label for="main-menu-toggle" class="main-menu-icon">
         <div class="vertbar top"></div>
         <div class="vertbar mid"></div>
         <div class="vertbar bot"></div>
       </label>
-      <input type="checkbox" id="show-resp-menu" role="button">
+      <input type="checkbox" id="main-menu-toggle" role="button">
       <nav class="main-menu" role="navigation">
         <?php wp_nav_menu( array( 'theme_location' => 'header-main-menu', 'fallback_cb' => false ) ); ?>
       </nav>

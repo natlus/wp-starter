@@ -1,8 +1,8 @@
 (function($) {
 
-  const icon = $('.show-resp-menu');
+  const icon = $('.main-menu-icon');
   const body = $('body');
-  const checkbox = $('input#show-resp-menu');
+  const checkbox = $('input#main-menu-toggle');
 
   /**
    * Manipulate body and menu icon when menu is shown/hidden
