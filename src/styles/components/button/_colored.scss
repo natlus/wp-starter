@@ -1,10 +1,8 @@
 .btn-accent {
   color: #fff;
   background: $accent;
-  border-color: darken($accent, 25%);
 
   &:hover {
-    background: darken($accent, 5%);
   }
 
   &.btn-outline {
@@ -23,10 +21,8 @@
 .btn-primary {
   color: #fff;
   background: $primary;
-  border-color: darken($primary, 10%);
 
   &:hover {
-    background: darken($primary, 10%);
   }
 
   &.btn-outline {
@@ -45,10 +41,8 @@
 .btn-success {
   color: #fff;
   background: $success;
-  border-color: darken($success, 10%);
 
   &:hover {
-    background: darken($success, 15%);
   }
 
   &.btn-outline {
@@ -67,10 +61,8 @@
 .btn-warning {
   color: #fff;
   background: $warning;
-  border-color: darken($warning, 10%);
 
   &:hover {
-    background: darken($warning, 10%);
   }
 
   &.btn-outline {
@@ -89,10 +81,8 @@
 .btn-danger {
   color: #fff;
   background: $danger;
-  border-color: darken($danger, 10%);
 
   &:hover {
-    background: darken($danger, 15%);
   }
 
   &.btn-outline {
@@ -111,10 +101,8 @@
 .btn-brand {
   color: $foreground;
   background: $brand;
-  border-color: darken($brand, 10%);
 
   &:hover {
-    background: darken($brand, 10%);
   }
 
   &.btn-outline {

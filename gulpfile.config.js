@@ -1,5 +1,5 @@
 export default {
-  'domain': 'localhost',
+  'domain': 'ddone.dev',
   'paths': {
     'sass': {
       'src': './src/styles/**/*.scss',
