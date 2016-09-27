@@ -13,11 +13,8 @@
 
   .container {
     @include flexbox(row);
-    @include container($box-container);
     align-items: center;
     height: $box-header;
-    padding-left: $box-gutter;
-    padding-right: $box-gutter;
   }
 
   @import './logo';

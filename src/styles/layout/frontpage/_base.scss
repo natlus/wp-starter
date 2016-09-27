@@ -3,9 +3,6 @@ main.frontpage {
 
   .container {
     @include flexbox(row);
-    @include container($box-container);
-    padding-left: $box-gutter;
-    padding-right: $box-gutter;
     align-items: center;
 
     &.fullscreen {

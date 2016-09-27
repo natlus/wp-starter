@@ -13,10 +13,7 @@
   }
 
   .container {
-    @include container($box-container);
     @include flexbox(row);
-    padding-left: $box-gutter;
-    padding-right: $box-gutter;
 
     @include breakpoint(small) {
       padding-left: 0;

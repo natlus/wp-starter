@@ -1,8 +1,5 @@
 main.default-page {
   .container {
-    @include container($box-container);
     order: 1;
-    padding-left: $box-gutter;
-    padding-right: $box-gutter;
   }
 }

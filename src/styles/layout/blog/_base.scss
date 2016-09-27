@@ -1,9 +1,9 @@
 main.blog {
   .container {
-    @include container($box-container - $box-sidebar);
+    max-width: $box-container - $box-sidebar;
     order: 1;
     margin-right: 0;
-    padding-left: $box-gutter;
+    padding-right: 0;
 
     @include breakpoint(large) {
       padding-right: $box-gutter;

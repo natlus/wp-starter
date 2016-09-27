@@ -2,7 +2,6 @@ main.not-found {
   text-align: center;
 
   .container {
-    @include container($box-container);
     @include flexbox(column);
     justify-content: center;
   }

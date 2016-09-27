@@ -8,8 +8,6 @@
   border-top: $border;
 
   .container {
-    padding-left: $box-gutter;
-    padding-right: $box-gutter;
     align-items: center;
 
     @include breakpoint(large) {
