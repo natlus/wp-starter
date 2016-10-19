@@ -4,7 +4,16 @@
   "description": "Fast WordPress starter theme using modern workflow",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "./node_modules/gulp/bin/gulp.js",
+    "clean": "./node_modules/rimraf/bin.js build/",
+    "build:css": "./node_modules/gulp/bin/gulp.js styles",
+    "build:js": "./node_modules/gulp/bin/gulp.js scripts",
+    "build:templates": "./node_modules/gulp/bin/gulp.js templates",
+    "build:php": "./node_modules/gulp/bin/gulp.js includes",
+    "build:images": "./node_modules/gulp/bin/gulp.js images",
+    "build:fonts": "./node_modules/gulp/bin/gulp.js fonts",
+    "build:lib": "./node_modules/gulp/bin/gulp.js vendor",
+    "build:clean": "npm run clean && ./node_modules/gulp/bin/gulp.js build"
   },
   "repository": {
     "type": "git"
@@ -24,6 +33,7 @@
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^2.1.1",
     "gulp-uglify": "^2.0.0",
+    "rimraf": "^2.5.4",
     "sanitize.css": "^4.1.0"
   },
   "devDependencies": {},

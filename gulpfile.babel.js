@@ -40,6 +40,17 @@ gulp.task('vendor', vendor(gulp, plugins, config.paths, errOut));
 gulp.task('images', images(gulp, plugins, config.paths, errOut));
 gulp.task('fonts', fonts(gulp, plugins, config.paths, errOut));
 
+// Combines all tasks into a dist build
+gulp.task('build', [
+  'styles',
+  'scripts',
+  'templates',
+  'includes',
+  'vendor',
+  'images',
+  'fonts',
+  ]);
+
 // Watch tasks
 gulp.task('default', ['serve', 'vendor', 'images', 'fonts'], () => {
   gulp.watch(config.paths.sass.src, ['styles']);
