@@ -32,15 +32,15 @@ gulp.task('serve', () => {
   });
 });
 
-gulp.task('styles', styles(gulp, plugins, config.paths, errOut));
-gulp.task('scripts', scripts(gulp, plugins, config.paths, errOut));
-gulp.task('templates', templates(gulp, plugins, config.paths, errOut));
-gulp.task('includes', includes(gulp, plugins, config.paths, errOut));
-gulp.task('vendor', vendor(gulp, plugins, config.paths, errOut));
-gulp.task('images', images(gulp, plugins, config.paths, errOut));
-gulp.task('fonts', fonts(gulp, plugins, config.paths, errOut));
+gulp.task('styles', styles(plugins, config.paths.sass, errOut));
+gulp.task('scripts', scripts(plugins, config.paths.js, errOut));
+gulp.task('templates', templates(plugins, config.paths.templates, errOut));
+gulp.task('includes', includes(plugins, config.paths.includes, errOut));
+gulp.task('vendor', vendor(config.paths.vendor, errOut));
+gulp.task('images', images(config.paths.images, errOut));
+gulp.task('fonts', fonts(config.paths.fonts, errOut));
 
-// Combines all tasks into a dist build
+// Combines all tasks into a distribution build
 gulp.task('build', [
   'styles',
   'scripts',
