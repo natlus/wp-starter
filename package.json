@@ -1,7 +1,7 @@
 {
   "name": "wp-starter",
   "version": "0.1.0",
-  "description": "Fast WordPress starter theme using modern workflow",
+  "description": "Fast WordPress starter theme using a modern workflow",
   "main": "index.html",
   "scripts": {
     "start": "./node_modules/gulp/bin/gulp.js",
