@@ -1,0 +1,12 @@
+.btn-empty {
+  transform: none;
+  background: none;
+  box-shadow: none;
+  border: 0;
+
+  &:hover {
+    background: none;
+    box-shadow: none;
+    border: 0;
+  }
+}

@@ -193,7 +193,7 @@
     $defaults = array(
       'size' => '',
       'color' => '',
-      'style' => '',
+      'type' => '',
       'class' => '',
       'for' => '',
     );
@@ -205,8 +205,8 @@
     if ($atts['color']) {
       $atts['color'] = ' btn-' . $atts['color'];
     }
-    if ($atts['style']) {
-      $atts['style'] = ' btn-' . $atts['style'];
+    if ($atts['type']) {
+      $atts['type'] = ' btn-' . $atts['type'];
     }
     if ($atts['class']) {
       $atts['class'] = ' ' . $atts['class'];
@@ -221,7 +221,7 @@
     ob_start();
 
       $output = ('
-        <'. $type . $atts['for'] .' role="button" class="btn'. $atts['size'] . $atts['color'] . $atts['style'] . $atts['class'] .'">'. do_shortcode($content) .'</'.$type.'>
+        <'. $type . $atts['for'] .' role="button" class="btn'. $atts['size'] . $atts['color'] . $atts['type'] . $atts['class'] .'">'. do_shortcode($content) .'</'.$type.'>
       ');
       echo $output;
 
