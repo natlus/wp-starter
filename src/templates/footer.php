@@ -1,21 +1,12 @@
 <footer class="mastfoot" role="footer">
 
-  <div class="container">
-    <div class="columns">
-      <div class="column one-fifth">
-        <?php if (is_active_sidebar('footer-col-1')) : dynamic_sidebar('footer-col-1'); endif; ?>
-      </div>
-      <div class="column one-fifth">
-        <?php if (is_active_sidebar('footer-col-2')) : dynamic_sidebar('footer-col-2'); endif; ?>
-      </div>
-      <div class="column one-fifth">
-        <?php if (is_active_sidebar('footer-col-3')) : dynamic_sidebar('footer-col-3'); endif; ?>
-      </div>
-      <div class="column two-fifths">
-        <?php if (is_active_sidebar('footer-col-4')) : dynamic_sidebar('footer-col-4'); endif; ?>
+  <section class="row">
+    <div class="container">
+      <div class="columns">
+        <?php if (is_active_sidebar('footer-columns')) : dynamic_sidebar('footer-columns'); endif; ?>
       </div>
     </div>
-  </div>
+  </section>
 
   <section class="mastfoot-bottom">
     <div class="container bottom">

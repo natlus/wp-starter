@@ -6,7 +6,6 @@ $box-container: 1024px;
 $box-sidebar: 256px;
 $box-gutter: 22px;
 $radius: 3px;
-$border: 1px solid #eee;
 
 // Main colors
 $background: #fcfcfc !default;
@@ -19,11 +18,12 @@ $header-fg: #424242;
 $footer-bg: #fcfcfc;
 $footer-bottom-bg: #fcfcfc;
 $footer-fg: #424242;
+$border-color: #eee;
 
 // States
 $default: #fcfcfc !default;
 $accent: #424242 !default;
-$primary: #679ce9 !default;
+$primary: #2196f3 !default;
 $success: #71e967 !default;
 $warning: #edd13b !default;
 $danger: #e96767 !default;
