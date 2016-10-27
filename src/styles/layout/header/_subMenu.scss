@@ -1,9 +1,72 @@
 // Sub menu
 .main-menu {
-  li.menu-item-has-children {
-    position: relative;
 
-    // Toggle
+  // Hide other menu items when sub-menu is open (mobile)
+  .menu {
+    > li {
+      opacity: 1 !important;
+      pointer-events: all !important;
+    }
+
+    &.sub-menu-is-open {
+      > li:not(.sub-menu-is-open) {
+        opacity: 0 !important;
+        pointer-events: none !important;
+      }
+    }
+  }
+
+  li.menu-item-has-children {
+
+    // The submenu toggle button
+    .toggle-sub-menu {
+      display: none;
+      z-index: 9;
+
+      @include breakpoint(small) {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        min-width: 64px;
+        width: 15%;
+        cursor: pointer;
+
+        &::after {
+          content: " ";
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          right: $box-gutter;
+          transform: translate3d(-50%, -50%, 0);
+          height: 48px;
+          width: 48px;
+          border-radius: 50%;
+          background-image: url('/wp-content/uploads/2016/10/chevron-down.png');
+          background-repeat: no-repeat;
+          background-size: 24px;
+          background-position: 50% 50%;
+          transition: all 150ms ease;
+          z-index: 10;
+        }
+
+        &.is-open {
+          &::after {
+            transform: translate3d(-50%, -50%, 0) rotate(90deg);
+          }
+        }
+
+        &:hover {
+          &::after {
+            background-color: rgba(#000, 0.1);
+          }
+        }
+      }
+    }
+
+    // Toggle on mouseover
     &:hover {
       &::before {
         display: block;
@@ -21,28 +84,76 @@
       position: absolute;
       left: 50%;
       top: 100%;
-      opacity: 0;
       transform: translate3d(-50%, 0, 0);
       transition: opacity 150ms ease-out;
-      background: rgba($header-bg, 1);
-      border: 1px solid rgba($accent, 0.1);
-      border-radius: 3px;
-      padding: $box-gutter / 2;
+      background: rgba($header-bg, 0.75);
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+      border: 1px solid rgba($header-fg, 0.2);
+      color: $header-fg;
       white-space: nowrap;
+      padding: ($box-gutter / 2) $box-gutter;
+      opacity: 0;
       pointer-events: none;
 
       @include breakpoint(small) {
         display: none;
+        top: 0;
+        left: 0;
+        width: 85%;
+        height: 100vh;
+        padding-bottom: $box-header;
+        border-radius: 0;
+        box-shadow: none;
+        transform: translate3d(0, 0, 0) !important;
+        background: darken($header-bg, 10%);
+        z-index: 10;
       }
 
-      a {
-        transition: none;
-        font-size: 13px;
-        display: block;
-        padding: 4px;
+      &.is-open {
+        display: block !important;
+        opacity: 1;
+        pointer-events: all;
+      }
 
-        &:hover {
-          color: #000;
+      // Menu items
+      > li {
+        position: relative;
+        display: inline-block;
+        padding: 0;
+
+        @include breakpoint(small) {
+          @include flexbox(column);
+          flex: 1;
+        }
+
+        > a {
+          position: relative;
+          display: block;
+          color: $header-fg;
+          font-size: 13px;
+          padding-top: 4px;
+          padding-bottom: 4px;
+
+          @include breakpoint(small) {
+            @include flexbox(row);
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: $text-xlarge * 1.25;
+            margin: 0;
+            padding: $box-gutter;
+            border: 0 !important;
+          }
+
+          &:hover {
+            color: #000;
+
+            @include breakpoint(small) {
+              background: darken($header-bg, 5%);
+            }
+          }
         }
       }
     }
