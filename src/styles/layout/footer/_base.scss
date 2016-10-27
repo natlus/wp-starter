@@ -1,11 +1,9 @@
 .mastfoot {
   @include flexbox(column);
-  width: 100%;
-  background: $footer-bg;
-  color: $footer-fg;
   position: relative;
-  background: $default;
-  box-shadow: 0 -1px 1px rgba(#000, 0.1);
+  width: 100%;
+  color: $footer-fg;
+  background: $footer-bg;
 
   @include breakpoint(small) {
     font-size: $text-large;
