@@ -1,53 +1,6 @@
 <?php
 
   /**
-  * Full view size jumbotron section
-  *
-  * [jumbotron]
-  * Options:
-  * class - optional, custom class
-  * color - optional, custom background color
-  * image - optional, custom background image
-  */
-
-  function jumbotron_shortcode( $atts, $content = null ) {
-
-    $defaults = array(
-      'class' => '',
-      'color' => '',
-      'image' => '',
-    );
-    $atts = shortcode_atts( $defaults, $atts );
-
-    if ($atts['image']) {
-      $atts['image'] = 'background: url('. $atts['image'] .') no-repeat center center;';
-    }
-
-    if ($atts['color']) {
-      $atts['color'] = 'background:'. $atts['color'] . ';';
-    }
-
-    ob_start();
-
-    $output = ('
-
-      <section class="jumbotron" style="'. $atts['image'] .'">
-        <div class="container">
-          <div class="columns">
-            '. do_shortcode($content) .'
-          </div>
-        </div>
-      </section>
-
-    ');
-
-    echo $output;
-
-  return ob_get_clean();
-  }
-  add_shortcode( 'jumbotron', 'jumbotron_shortcode' );
-
-  /**
    *  Full width Row shortcode
    *
    *  [row color="white" image="http://example.com/bg.png"]
