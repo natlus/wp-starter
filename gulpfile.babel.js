@@ -12,6 +12,9 @@ import includes from './tasks/includes';
 import vendor from './tasks/vendor';
 import images from './tasks/images';
 import fonts from './tasks/fonts';
+import {
+  lintScss
+} from './tasks/lint';
 
 const plugins = loadPlugins({
   pattern: '*',
@@ -39,6 +42,7 @@ gulp.task('includes', includes(plugins, config.paths.includes, errOut));
 gulp.task('vendor', vendor(config.paths.vendor, errOut));
 gulp.task('images', images(config.paths.images, errOut));
 gulp.task('fonts', fonts(config.paths.fonts, errOut));
+gulp.task('lint:scss', lintScss(config.paths.sass, plugins));
 
 // Combines all tasks into a distribution build
 gulp.task('build', [
@@ -53,7 +57,7 @@ gulp.task('build', [
 
 // Watch tasks
 gulp.task('default', ['serve', 'vendor', 'images', 'fonts'], () => {
-  gulp.watch(config.paths.sass.src, ['styles']);
+  gulp.watch(config.paths.sass.src, ['styles', 'lint:scss']);
   gulp.watch(config.paths.js.src, ['scripts']);
   gulp.watch(config.paths.templates.src, ['templates']);
   gulp.watch(config.paths.includes.src, ['includes']);
