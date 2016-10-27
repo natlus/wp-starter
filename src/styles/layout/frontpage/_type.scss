@@ -1,0 +1,8 @@
+a:not([class]),
+a:not([class]):visited {
+  color: $primary;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -5,15 +5,17 @@
    *
    *  [row color="white" image="http://example.com/bg.png"]
    *  Options:
-   *  class - optional, custom class
-   *  color - optional, custom background color
-   *  image - optional, custom background image
+   *  class - custom class
+   *  color - custom text color within the shortcode
+   *  background - custom background color for the row section
+   *  image - custom background image for the row section
    */
 
   function row_shortcode( $atts, $content = null ) {
 
     $defaults = array(
       'class' => '',
+      'background' => '',
       'color' => '',
       'image' => '',
     );
@@ -23,7 +25,10 @@
       $atts['class'] = ' ' . $atts['class'];
     }
     if ($atts['color']) {
-      $atts['color'] = 'background: '. $atts['color'] .';';
+      $atts['color'] = 'color: '. $atts['color'] .';';
+    }
+    if ($atts['background']) {
+      $atts['background'] = 'background: '. $atts['background'] .';';
     }
     if ($atts['image']) {
       $atts['color'] = 'background: url('. $atts['image'] .');';
@@ -33,7 +38,7 @@
 
       $output = ('
 
-        <section class="row'.$atts['class'].'" style="'. $atts['color'] .'">
+        <section class="row'.$atts['class'].'" style="'. $atts['color'] . $atts['background'] . $atts['image'] .'">
           <div class="container">
             <div class="columns'.$atts['class'].'">
               '. do_shortcode($content) .'
