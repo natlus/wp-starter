@@ -1,12 +1,12 @@
 export default {
   'domain': 'ddone.dev',
   'paths': {
-    'sass': {
+    'styles': {
       'src': './src/styles/**/*.scss',
       'build': './build/css/',
       'dist': './dist/css/',
     },
-    'js': {
+    'scripts': {
       'src': './src/scripts/**/*.js',
       'build': './build/js/',
       'dist': './dist/js/',

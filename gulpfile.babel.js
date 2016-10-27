@@ -35,14 +35,14 @@ gulp.task('serve', () => {
   });
 });
 
-gulp.task('styles', styles(plugins, config.paths.sass, errOut));
-gulp.task('scripts', scripts(plugins, config.paths.js, errOut));
+gulp.task('styles', styles(plugins, config.paths.styles, errOut));
+gulp.task('scripts', scripts(plugins, config.paths.scripts, errOut));
 gulp.task('templates', templates(plugins, config.paths.templates, errOut));
 gulp.task('includes', includes(plugins, config.paths.includes, errOut));
 gulp.task('vendor', vendor(config.paths.vendor, errOut));
 gulp.task('images', images(config.paths.images, errOut));
 gulp.task('fonts', fonts(config.paths.fonts, errOut));
-gulp.task('lint:scss', lintScss(config.paths.sass, plugins));
+gulp.task('lint:scss', lintScss(config.paths.styles, plugins));
 
 // Combines all tasks into a distribution build
 gulp.task('build', [
@@ -57,8 +57,8 @@ gulp.task('build', [
 
 // Watch tasks
 gulp.task('default', ['serve', 'vendor', 'images', 'fonts'], () => {
-  gulp.watch(config.paths.sass.src, ['styles', 'lint:scss']);
-  gulp.watch(config.paths.js.src, ['scripts']);
+  gulp.watch(config.paths.styles.src, ['styles', 'lint:scss']);
+  gulp.watch(config.paths.scripts.src, ['scripts']);
   gulp.watch(config.paths.templates.src, ['templates']);
   gulp.watch(config.paths.includes.src, ['includes']);
 });
