@@ -1,5 +1,5 @@
 export default {
-  'domain': 'ddone.dev',
+  'domain': 'wp-starter.dev',
   'paths': {
     'styles': {
       'src': './src/styles/**/*.scss',
