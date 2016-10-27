@@ -4,7 +4,7 @@ main.main {
   flex: 1;
   margin-top: $box-header;
 
-  &:not(.jumbopage) {
+  &:not(.jumbopage) {
     margin-top: $box-header;
   }
 }

@@ -40,11 +40,13 @@ input#main-menu-toggle {
 }
 
 .main-menu-icon.close .vertbar.top {
-  transform: translate3d(0 ,0 ,0) rotate(45deg);
+  transform: translate3d(0, 0, 0) rotate(45deg);
 }
+
 .main-menu-icon.close .vertbar.mid {
   transform: translate3d(0, 0, 0) scale3d(0, 0, 0);
 }
+
 .main-menu-icon.close .vertbar.bot {
   transform: translate3d(0, 0, 0) rotate(-45deg);
 }

@@ -2,9 +2,6 @@
   color: #fff;
   background: $accent;
 
-  &:hover {
-  }
-
   &.btn-outline {
     color: $accent;
     background: transparent;
@@ -21,9 +18,6 @@
 .btn-primary {
   color: #fff;
   background: $primary;
-
-  &:hover {
-  }
 
   &.btn-outline {
     color: $primary;
@@ -42,9 +36,6 @@
   color: #fff;
   background: $success;
 
-  &:hover {
-  }
-
   &.btn-outline {
     color: $success;
     background: transparent;
@@ -61,9 +52,6 @@
 .btn-warning {
   color: #fff;
   background: $warning;
-
-  &:hover {
-  }
 
   &.btn-outline {
     color: $warning;
@@ -82,9 +70,6 @@
   color: #fff;
   background: $danger;
 
-  &:hover {
-  }
-
   &.btn-outline {
     color: $danger;
     background: transparent;
@@ -101,9 +86,6 @@
 .btn-brand {
   color: $foreground;
   background: $brand;
-
-  &:hover {
-  }
 
   &.btn-outline {
     color: $brand;
