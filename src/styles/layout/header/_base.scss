@@ -1,13 +1,8 @@
 .masthead {
   position: fixed;
   width: 100%;
-  background: $header-bg;
-  color: $header-fg;
-  box-shadow: 1px 0 2px rgba(#000, 0.2);
+  background: rgba($header-bg, 0.2);
   z-index: 8;
-
-  &.no-background {
-  }
 
   .container {
     @include flexbox(row);

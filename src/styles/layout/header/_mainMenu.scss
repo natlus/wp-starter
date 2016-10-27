@@ -41,18 +41,14 @@
 
   // Menu items
   a {
-    margin-left: 10px;
-    margin-right: 10px;
-    font-weight: 600;
-    text-decoration: none;
-    color: inherit;
-    transition: color 150ms ease;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    display: block;
+    margin-left: $box-gutter / 2;
+    margin-right: $box-gutter / 2;
+    padding: 8px 0;
+    color: $header-fg;
+    font-size: 14px;
 
     &:hover {
-      color: $brand;
+      color: #000;
     }
 
     &:not(.current) {
