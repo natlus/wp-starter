@@ -53,12 +53,12 @@ input#main-menu-toggle {
 
 // Show responsive main menu on menu button click
 input#main-menu-toggle:checked ~ nav.main-menu {
-  display: block !important;
-  transform: scale3d(1, 1, 1) !important;
+  display: block;
+  transform: scale3d(1, 1, 1);
 }
 
 // Toggle menu item animation on menu button click
 input#main-menu-toggle:checked ~ nav.main-menu li {
-  transform: translate3d(0, 0, 0) !important;
-  opacity: 1 !important;
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
 }

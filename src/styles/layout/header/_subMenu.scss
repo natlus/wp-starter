@@ -4,8 +4,8 @@
   // Hide other menu items when sub-menu is open (mobile)
   .menu {
     > li {
-      opacity: 1 !important;
-      pointer-events: all !important;
+      // opacity: 1 !important;
+      // pointer-events: all !important;
     }
 
     &.sub-menu-is-open {
@@ -44,7 +44,7 @@
           height: 48px;
           width: 48px;
           border-radius: 50%;
-          background-image: url('/wp-content/uploads/2016/10/chevron-down.png');
+          background-image: url('../images/chevron.png');
           background-repeat: no-repeat;
           background-size: 24px;
           background-position: 50% 50%;
@@ -103,6 +103,7 @@
         height: 100vh;
         padding-bottom: $box-header;
         border-radius: 0;
+        border: 0;
         box-shadow: none;
         transform: translate3d(0, 0, 0) !important;
         background: darken($header-bg, 10%);
@@ -139,7 +140,6 @@
             flex: 1;
             align-items: center;
             justify-content: center;
-            color: #fff;
             font-size: $text-xlarge * 1.25;
             margin: 0;
             padding: $box-gutter;
@@ -148,10 +148,6 @@
 
           &:hover {
             color: #000;
-
-            @include breakpoint(small) {
-              background: darken($header-bg, 5%);
-            }
           }
         }
       }
