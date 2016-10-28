@@ -10,6 +10,10 @@
   color: $foreground;
   z-index: 2;
 
+  @include breakpoint(small) {
+    display: none;
+  }
+
   @import './widgets';
   @import './columns';
 }
