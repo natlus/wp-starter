@@ -12,7 +12,7 @@ html {
 // Main site wrap
 body {
   @include flexbox(column);
-  animation: fade-in 200ms 200ms ease-in backwards 1;
+  animation: 'fade-in' 250ms 250ms ease-in backwards 1;
   font-family: $sans;
   font-size: $text-base;
   line-height: $line-height;
