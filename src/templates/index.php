@@ -35,7 +35,7 @@
             </span>
           <?php endif; ?>
           <?php if ( strpos( $post->post_content , "<!--more-->" ) != false ) : ?>
-            <span class="read-more"><a class="btn" href="<?php the_permalink(); ?>">Read more</a></span>
+            <span class="read-more"><a href="<?php the_permalink(); ?>">Read more</a></span>
             <?php endif; ?>
         </footer>
 
@@ -49,13 +49,13 @@
           $pagination = paginate_links(
             array(
               'type' => 'array',
-              'next_text' => '<span class="ion-chevron-right"></span>',
-              'prev_text' => '<span class="ion-chevron-left"></span>',
+              'next_text' => ' ',
+              'prev_text' => ' ',
             )
           );
 
           foreach ($pagination as $n) {
-            echo '<span class="btn">' . $n . '</span>';
+            echo '<span class="btn btn-small">' . $n . '</span>';
           }
 
 

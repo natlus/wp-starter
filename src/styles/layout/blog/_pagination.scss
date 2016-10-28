@@ -1,26 +1,39 @@
 .pagination {
-  margin-bottom: $box-gutter;
-  align-items: center;
+  @include flexbox(row);
   justify-content: center;
-  color: $foreground;
-  border-radius: 3px;
+  align-items: center;
+  margin-bottom: $box-gutter;
 
-  .btn {
-    padding: 0;
+  .next,
+  .prev {
+    background-image: url('../images/chevron.png');
+    background-size: 11px;
+    background-position: 50% 50%;
+  }
+
+  .next {
+    transform: rotate(-90deg);
+  }
+
+  .prev {
+    transform: rotate(90deg);
   }
 
   .page-numbers {
-    display: block;
-    padding: 6px 12px;
-
-    [class*=ion] {
-      vertical-align: baseline;
-      font-size: inherit;
-      margin: 0;
-    }
+    @include flexbox(row);
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 32px;
 
     &.current {
       color: $primary;
+    }
+  }
+
+  .btn {
+    &:hover {
+      transform: none;
     }
   }
 }

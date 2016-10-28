@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main class="main default-page" role="main">
+<main class="main single" role="main">
 
     <div class="container">
 
@@ -7,8 +7,8 @@
 
 			<section class="post">
 
-				<header class="posthead">
-					<h2 class="title">
+        <header class="posthead">
+          <h2 class="title">
             <?php the_title(); ?>
           </h2>
           <small class="post-meta">
@@ -20,7 +20,7 @@
               <?php the_category(', '); ?>
             </div>
           </small>
-				</header>
+        </header>
 
 				<article class="content" id="post-<?php the_ID(); ?>">
 					<?php the_content(); ?>

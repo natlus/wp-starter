@@ -1,13 +1,4 @@
 .post {
-  margin-top: $box-gutter;
-
-  &:not(:last-of-type) {
-    border-bottom: solid 1px $border-color;
-  }
-
-  &:last-of-type {
-    margin-bottom: $box-gutter;
-  }
 
   // Post header
   .posthead {
@@ -86,13 +77,5 @@
     padding-bottom: $box-gutter;
     color: $foreground;
     font-size: 13px;
-
-    .read-more {
-      margin-left: auto;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
   }
 }
