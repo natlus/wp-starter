@@ -157,7 +157,7 @@
           <input class="modal-checkbox" type="checkbox" id="modal-' . $atts['id'] .'">
           <section class="modal" id="modal-' . $atts['id'] .'">
             <div class="modal-inner" style="width: '. $atts['width'] .'px">
-              <label class="modal-close" for="modal-'. $atts['id'] .'"><span class="ion-close"></span></label>
+              <label class="modal-close" for="modal-'. $atts['id'] .'">close</label>
               <header class="modal-header"><span class="modal-title">'. $atts['title'] .'</span></header>
               <div class="modal-body">'. do_shortcode($content) .'</div>
             </div>

@@ -1,0 +1,13 @@
+.modal-header {
+  @include flexbox(row);
+  align-items: center;
+  position: relative;
+  padding: ($box-gutter / 2) $box-gutter;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  z-index: 2;
+
+  .modal-title {
+    font-weight: 600;
+  }
+}

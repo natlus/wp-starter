@@ -1,1 +1,34 @@
-@import './modal';
+$radius: 4px;
+$modal-border: solid 1px rgba(#000, 0);
+
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  pointer-events: none;
+  transition: background 250ms ease, transform 0 0 ease;
+  z-index: 11;
+
+  // Enabled
+  input[id*="modal-"]:checked ~ & {
+    background: rgba(#000, 0.35);
+  }
+
+  // Disabled
+  input[id*="modal-"]:not(:checked) ~ & {
+    background: transparent;
+    transition: background 250ms ease, transform 0 300ms ease;
+  }
+
+  @import './inner';
+  @import './header';
+  @import './body';
+  @import './close';
+}
+
+// Always hide the trigger checkbox
+input[id*="modal"] {
+  display: none;
+}
