@@ -65,3 +65,11 @@ article ol:not([class]) {
     list-style: decimal;
   }
 }
+
+code {
+  background: darken($background, 10%);
+  padding: 1px 6px;
+  font-family: $mono;
+  border-radius: $radius;
+  word-wrap: none;
+}
