@@ -16,16 +16,7 @@ export default (plugins, path, errOut) => {
         .pipe(plugins.plumber({ errorHandler: errOut }))
         .pipe(plugins.newer(path.build))
         .pipe(plugins.sass())
-        .pipe(plugins.autoprefixer())
-        .pipe(plugins.cssnano({
-          autoprefixer: false,
-          discardUnused: false,
-          mergeIdents: false,
-          mergeLonghand: false,
-          mergeRules: false,
-          reduceIdents: false,
-          reduceTransforms: false,
-        }))
+        .pipe(plugins.cssnano())
       .pipe(plugins.sourcemaps.write('.'))
       .pipe(gulp.dest(path.build))
       .pipe(plugins.browserSync.stream())
