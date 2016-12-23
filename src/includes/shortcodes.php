@@ -1,14 +1,14 @@
 <?php
 
   /**
-   *  Full width Row shortcode
+   * Full width Row shortcode
+   * [row]
    *
-   *  [row color="white" image="http://example.com/bg.png"]
-   *  Options:
-   *  class - custom class
-   *  color - custom text color within the shortcode
-   *  background - custom background color for the row section
-   *  image - custom background image for the row section
+   * Options
+   * class: custom html class
+   * color: color for text inside the shortcode
+   * background: background color for the section
+   * image: background image for the section
    */
 
   function row_shortcode( $atts, $content = null ) {
@@ -31,7 +31,7 @@
       $atts['background'] = 'background: '. $atts['background'] .';';
     }
     if ($atts['image']) {
-      $atts['color'] = 'background: url('. $atts['image'] .');';
+      $atts['image'] = 'background: url('. $atts['image'] .');';
     }
 
     ob_start();
@@ -55,12 +55,13 @@
   add_shortcode( 'row', 'row_shortcode' );
 
   /**
-   *  Column shortcode for grid layouts
+   * Column shortcode for grid layouts
+   * [column]
    *
-   *  [column]
-   *  Options:
-   *  size - percentage size in fractions, ie. 1/3 (33%)
-   *  Default size will scale to fit
+   * Options
+   * class: custom html class
+   * size: size of the column in fractions (ie 1/2, 1/3)
+   * Default size will scale to fit.
    */
 
   function grid_shortcode( $atts, $content = null ) {
@@ -133,59 +134,14 @@
   add_shortcode( 'column', 'grid_shortcode' );
 
   /**
-   *  Modal window shortcode
+   * Button shortcode
+   * [button]
    *
-   *  [modal id="modal-name" title="modal-title"]
-   *  Options:
-   *  id - required, unique name for the modal
-   *  title - optional, title text at top of the modal
-   *  width - optional, fixed width, default is auto with max container width
-   */
-
-  function modal_shortcode( $atts, $content = null ) {
-
-    $defaults = array(
-      'id' => '',
-      'title' => '',
-      'width' => '',
-    );
-    $atts = shortcode_atts( $defaults, $atts );
-
-    ob_start();
-      if ($atts['id']) {
-        $output = ('
-          <input class="modal-checkbox" type="checkbox" id="modal-' . $atts['id'] .'">
-          <section class="modal" id="modal-' . $atts['id'] .'">
-            <div class="modal-inner" style="width: '. $atts['width'] .'px">
-              <label class="modal-close" for="modal-'. $atts['id'] .'">close</label>
-              <header class="modal-header"><span class="modal-title">'. $atts['title'] .'</span></header>
-              <div class="modal-body">'. do_shortcode($content) .'</div>
-            </div>
-          </section>
-          <style>
-          input[id*="modal-"]:checked ~ .modal#modal-'. $atts['id'] .' {
-            transform: scale3d(1, 1, 1);
-          }
-          </style>
-        ');
-        echo $output;
-      }
-
-    return ob_get_clean();
-
-  }
-  add_shortcode('modal', 'modal_shortcode');
-
-  /**
-   *  Button shortcode
-   *
-   *  [button]
-   *  Options:
-   *  size - small, large, xlarge
-   *  color - default, accent, primary, warning, danger
-   *  style - outline or default
-   *  class - custom class
-   *  for - if set, button will become a label to trigger set modal window
+   * Options
+   * class: custom html class
+   * size: button size (small, large, xlarge)
+   * color: color of the button (default, brand, accent, primary, warning, danger)
+   * style: style of the button (outline or default)
    */
 
   function button_shortcode($atts, $content = null) {
@@ -211,17 +167,13 @@
     if ($atts['class']) {
       $atts['class'] = ' ' . $atts['class'];
     }
-    if ($atts['for']) {
-      $type = 'label';
-      $atts['for'] = ' for="modal-'. $atts['for'] .'"';
-    } else {
-      $type = 'span';
-    }
 
     ob_start();
 
       $output = ('
-        <'. $type . $atts['for'] .' role="button" class="btn'. $atts['size'] . $atts['color'] . $atts['type'] . $atts['class'] .'">'. do_shortcode($content) .'</'.$type.'>
+        <span role="button" class="btn'. $atts['size'] . $atts['color'] . $atts['type'] . $atts['class'] .'">
+          '.do_shortcode($content).'
+        </span>
       ');
       echo $output;
 
