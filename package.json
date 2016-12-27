@@ -13,7 +13,7 @@
     "build:images": "./node_modules/gulp/bin/gulp.js images",
     "build:fonts": "./node_modules/gulp/bin/gulp.js fonts",
     "build:lib": "./node_modules/gulp/bin/gulp.js vendor",
-    "build:clean": "npm run clean && ./node_modules/gulp/bin/gulp.js build",
+    "build:clean": "npm run clean ; ./node_modules/gulp/bin/gulp.js build",
     "lint:scss": "./node_modules/gulp/bin/gulp.js lint:scss"
   },
   "repository": {
